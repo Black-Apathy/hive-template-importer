@@ -1,0 +1,904 @@
+/* =========================================================
+   APP LAYOUT
+   ========================================================= */
+
+.app {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 40px 80px;
+}
+
+
+/* =========================================================
+   IMPORT PANEL
+   ========================================================= */
+
+.import-panel {
+    padding: 32px;
+    margin-bottom: 44px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.import-panel-header {
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.import-panel-header h2 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.import-panel-header p {
+    max-width: 650px;
+    margin: 8px 0 0;
+    color: var(--color-text-muted);
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+
+/* Upload zone */
+
+.upload-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 190px;
+
+    margin: 0;
+    padding: 32px;
+
+    border: 2px dashed var(--color-border-strong);
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface-muted);
+    color: var(--color-text);
+
+    text-align: center;
+    cursor: pointer;
+
+    transition:
+        background-color 150ms ease,
+        border-color 150ms ease,
+        box-shadow 150ms ease,
+        transform 150ms ease;
+}
+
+.upload-zone:hover {
+    background: var(--background-50);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.upload-zone.has-file {
+    border-color: var(--color-primary);
+    background: var(--background-50);
+}
+
+.upload-zone input[type="file"] {
+    display: none;
+}
+
+.upload-zone strong {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.upload-zone span {
+    margin-top: 5px;
+    color: var(--color-text-muted);
+    font-size: 13px;
+}
+
+.upload-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+    color: white;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* Import action row */
+
+.import-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.import-hint {
+    color: var(--color-text-muted);
+    font-size: 13px;
+}
+
+.import-error {
+    margin: 14px 0 0;
+    color: #b91c1c;
+}
+
+
+/* =========================================================
+   TEMPLATE HEADER
+   ========================================================= */
+
+.template-header {
+    margin-bottom: 28px;
+}
+
+.template-title-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.template-title-row h1 {
+    margin: 0;
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+.back-to-templates {
+  margin-bottom: 16px;
+  padding: 8px 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.back-to-templates:hover {
+  color: var(--color-primary);
+}
+
+
+/* =========================================================
+   IMPORT STATUS
+   ========================================================= */
+
+.import-summary {
+    max-width: 760px;
+
+    padding: 20px 22px;
+    margin: 0 0 28px;
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.import-summary p {
+    margin: 9px 0 0;
+    color: var(--color-text-muted);
+}
+
+.import-summary strong {
+    font-weight: 700;
+}
+
+/* =========================================================
+  IMPORT WARNING
+  ========================================================= */
+
+.import-warning {
+   max-width: 760px;
+
+   margin: 0 0 28px;
+   padding: 20px 22px;
+
+   background: #fff7ed;
+
+   border: 1px solid #fdba74;
+   border-left: 4px solid #f97316;
+
+   border-radius: var(--radius-md);
+
+   box-shadow: var(--shadow-sm);
+}
+
+.import-warning-header {
+   display: flex;
+   align-items: flex-start;
+   gap: 12px;
+}
+
+.import-warning-icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   flex-shrink: 0;
+
+   width: 24px;
+   height: 24px;
+
+   border-radius: 50%;
+
+   background: #f97316;
+   color: white;
+
+   font-size: 14px;
+   font-weight: 800;
+}
+
+.import-warning-header strong {
+   color: #9a3412;
+   font-weight: 700;
+}
+
+.import-warning-header p {
+   margin: 7px 0 0;
+
+   color: #7c2d12;
+
+   line-height: 1.5;
+}
+
+.import-warning-issues {
+   margin-top: 18px;
+
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.import-issue {
+   padding: 13px 14px;
+
+   background: rgb(255 255 255 / 70%);
+
+   border: 1px solid #fed7aa;
+   border-radius: var(--radius-sm);
+}
+
+.import-issue-title {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.import-issue-title strong {
+   color: #9a3412;
+}
+
+.import-issue-title span {
+   padding: 3px 7px;
+
+   border-radius: 999px;
+
+   background: #ffedd5;
+   color: #9a3412;
+
+   font-size: 12px;
+   font-weight: 600;
+}
+
+.import-issue p {
+   margin: 7px 0 0;
+
+   color: #7c2d12;
+
+   font-size: 14px;
+   line-height: 1.5;
+}
+
+/* =========================================================
+   TEMPLATE ACTIONS
+   ========================================================= */
+
+.template-actions {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 28px;
+}
+
+/* =========================================================
+  TEMPLATE LIBRARY
+  ========================================================= */
+
+.template-library {
+   margin-top: 32px;
+}
+
+.template-library-header {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   gap: 24px;
+   margin-bottom: 18px;
+}
+
+.template-library-header h2 {
+   margin: 6px 0 6px;
+   font-size: 1.5rem;
+}
+
+.template-library-header p {
+   margin: 0;
+   color: var(--color-text-muted);
+}
+
+.template-count {
+   flex-shrink: 0;
+   padding: 6px 10px;
+   border: 1px solid var(--color-border);
+   border-radius: 999px;
+   background: var(--color-surface);
+   color: var(--color-text-muted);
+   font-size: 0.85rem;
+}
+
+.template-grid {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 16px;
+}
+
+.template-card {
+   width: 100%;
+   min-height: 170px;
+   padding: 20px;
+
+   border: 1px solid var(--color-border);
+   border-radius: var(--radius-lg);
+
+   background: var(--color-surface);
+   color: var(--color-text);
+
+   box-shadow: var(--shadow-sm);
+
+   text-align: left;
+   cursor: pointer;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 20px;
+
+   transition:
+       transform 150ms ease,
+       border-color 150ms ease,
+       box-shadow 150ms ease;
+}
+
+.template-card:hover {
+   transform: translateY(-2px);
+   border-color: var(--color-primary);
+   box-shadow: var(--shadow-md);
+}
+
+.template-card:focus-visible {
+   outline: 2px solid var(--color-primary);
+   outline-offset: 2px;
+}
+
+.template-card-top {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.template-source {
+   display: inline-flex;
+   align-items: center;
+
+   padding: 4px 8px;
+
+   border-radius: 999px;
+
+   background: var(--color-surface-muted);
+   color: var(--color-text-muted);
+
+   font-size: 0.75rem;
+   font-weight: 700;
+   letter-spacing: 0.04em;
+   text-transform: uppercase;
+}
+
+.template-arrow {
+   font-size: 1.25rem;
+   color: var(--color-text-muted);
+
+   transition:
+       transform 150ms ease,
+       color 150ms ease;
+}
+
+.template-card:hover .template-arrow {
+   transform: translateX(3px);
+   color: var(--color-primary);
+}
+
+.template-card-name {
+   display: block;
+
+   font-size: 1.05rem;
+   line-height: 1.35;
+}
+
+.template-card-stats {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+}
+
+.template-card-stats span {
+   padding: 5px 8px;
+
+   border-radius: var(--radius-sm);
+
+   background: var(--color-surface-muted);
+   color: var(--color-text-muted);
+
+   font-size: 0.8rem;
+}
+
+.empty-library {
+   padding: 40px;
+
+   border: 1px dashed var(--color-border-strong);
+   border-radius: var(--radius-lg);
+
+   background: var(--color-surface);
+
+   text-align: center;
+}
+
+.empty-library strong {
+   display: block;
+   margin-bottom: 6px;
+}
+
+.empty-library p {
+   margin: 0;
+   color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+
+    padding: 8px 14px;
+
+    background: var(--color-surface);
+    color: var(--color-text);
+
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    cursor: pointer;
+
+    transition:
+        background-color 150ms ease,
+        border-color 150ms ease,
+        color 150ms ease,
+        box-shadow 150ms ease,
+        transform 100ms ease;
+}
+
+button:hover:not(:disabled) {
+    background: var(--color-surface-muted);
+    border-color: var(--color-primary);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Primary buttons */
+
+.import-actions > button,
+.template-actions button {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.import-actions > button:hover:not(:disabled),
+.template-actions button:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    box-shadow: var(--shadow-md);
+}
+
+
+/* Secondary / edit buttons */
+
+.template-title-row button,
+.field-header button,
+details > summary button {
+    padding: 6px 10px;
+
+    border: 1px solid var(--color-border);
+
+    background: transparent;
+    color: var(--color-text-muted);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    box-shadow: none;
+}
+
+.template-title-row button:hover:not(:disabled),
+.field-header button:hover:not(:disabled),
+details > summary button:hover:not(:disabled) {
+    background: var(--background-50);
+    border-color: var(--color-primary);
+    color: var(--color-primary-hover);
+}
+
+
+/* =========================================================
+   TEMPLATE HIERARCHY
+   ========================================================= */
+
+details {
+    margin: 12px 0;
+}
+
+
+/* Section */
+
+.app > details > summary {
+    min-height: 58px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border-color: var(--color-border-strong);
+}
+
+
+/* All summaries */
+
+details > summary {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    padding: 13px 16px;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    background: var(--color-surface);
+    color: var(--color-text);
+
+    list-style-position: inside;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        background-color 150ms ease,
+        border-color 150ms ease,
+        box-shadow 150ms ease;
+}
+
+details > summary:hover {
+    background: var(--color-surface-muted);
+    border-color: var(--color-border-strong);
+}
+
+details > summary::marker {
+    color: var(--color-primary);
+}
+
+details[open] > summary {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+/* =========================================================
+   SUBSECTION LEVEL
+   ========================================================= */
+
+details > details {
+    margin: 0 0 0 22px;
+
+    padding: 8px 0 8px 18px;
+
+    border-left: 2px solid var(--secondary-300);
+}
+
+details > details > summary {
+    margin: 8px 0;
+
+    padding: 12px 14px;
+
+    background: var(--color-surface);
+
+    border-color: var(--color-border);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+details > details > summary:hover {
+    background: var(--background-50);
+}
+
+details > details > summary::marker {
+    color: var(--color-secondary);
+}
+
+
+/* =========================================================
+   SUMMARY CONTENT
+   ========================================================= */
+
+.summary-content {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 12px;
+}
+
+.summary-content strong {
+    min-width: 0;
+}
+
+.summary-content button {
+    margin-left: auto;
+}
+
+
+/* =========================================================
+   FIELDS
+   ========================================================= */
+
+.field {
+    margin: 8px 0 8px 22px;
+
+    padding: 15px 17px;
+
+    border: 1px solid var(--color-border);
+
+    border-left: 3px solid var(--secondary-300);
+
+    border-radius: var(--radius-sm);
+
+    background: var(--color-surface);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        border-color 150ms ease,
+        box-shadow 150ms ease,
+        transform 150ms ease;
+}
+
+.field:hover {
+    border-left-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+}
+
+.field-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.field-header button {
+    margin-left: auto;
+}
+
+.field-header strong {
+    font-weight: 600;
+}
+
+.field-comment {
+    margin-top: 9px;
+
+    color: var(--color-text-muted);
+
+    line-height: 1.55;
+}
+
+.field-comment a {
+    color: var(--color-accent);
+}
+
+.field-comment a:hover {
+    text-decoration-thickness: 2px;
+}
+
+
+/* =========================================================
+   EDITOR
+   ========================================================= */
+
+.editor {
+    padding: 18px;
+
+    margin: 6px 0;
+
+    background: var(--color-surface-muted);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-md);
+}
+
+.editor-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 14px;
+}
+
+.editor-field label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.editor-field input,
+.editor-field textarea {
+    width: 100%;
+
+    padding: 9px 10px;
+
+    border: 1px solid var(--color-border-strong);
+
+    border-radius: var(--radius-sm);
+
+    background: var(--color-surface);
+    color: var(--color-text);
+
+    font: inherit;
+}
+
+.editor-field input:focus,
+.editor-field textarea:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+
+    border-color: var(--color-accent);
+}
+
+.editor-field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.editor-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+   @media (max-width: 700px) {
+      .app {
+          padding: 28px 18px 60px;
+      }
+
+      .import-panel {
+          padding: 22px;
+      }
+
+      .template-title-row {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 10px;
+      }
+
+      .template-title-row h1 {
+          font-size: 28px;
+      }
+
+      .import-actions {
+          align-items: flex-start;
+          flex-direction: column;
+      }
+
+      .template-library-header {
+          align-items: flex-start;
+          flex-direction: column;
+      }
+
+      .template-grid {
+          grid-template-columns: 1fr;
+      }
+
+      details > details {
+          margin-left: 10px;
+          padding-left: 12px;
+      }
+
+      .field {
+          margin-left: 10px;
+      }
+   }
+
+/* =========================================================
+   LOADING SCREEN
+   ========================================================= */
+
+.template-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.template-loading strong {
+  font-size: 1.1rem;
+}
+
+.template-loading p {
+  margin-top: 6px;
+  color: var(--color-text-muted);
+}
