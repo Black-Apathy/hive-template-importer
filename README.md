@@ -55,6 +55,25 @@ Node + Express + TypeScript
              ▼
         PostgreSQL / Supabase
 ```
+## Verification
+
+The backend includes a deterministic verification suite for the committed Spectora sample export.
+
+From the `backend/` directory:
+
+```bash
+npm test
+```
+
+This builds the backend and verifies the imported sample against the source export, including hierarchy, ordering, field data, comment content, HTML preservation, and import issues.
+
+The current verification result is:
+
+- 13 sections preserved
+- 69 subsections preserved
+- 392 fields preserved
+- 5,886 verification checks passed
+- 0 import issues in the clean source export
 
 ## Data model
 

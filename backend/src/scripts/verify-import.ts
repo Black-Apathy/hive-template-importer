@@ -307,10 +307,6 @@ check(
  * Final result
  */
 
-/*
- * Final result
- */
-
 console.log("\nVERIFICATION RESULTS\n");
 
 console.log(`✓ ${template.sections.length} sections preserved`);
